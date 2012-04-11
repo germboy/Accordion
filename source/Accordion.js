@@ -17,10 +17,6 @@ enyo.kind({
 		silent = ((silent === undefined) || (silent === false)) ? false : true;
 		this.bubbleUp("onToggle", silent);
 		
-		// We propagate 'click' as 'change' for IE
-		// compatibility, as discussed in the 'change' method
-		// comments.
-		//this.bubbleUp("onchange", inEvent);
 	}
 	
 });
@@ -86,7 +82,6 @@ enyo.kind({
 	
 	rendered: function() {
 		this.inherited(arguments);
-		//this.applyHeight();
 	},
 	
 	getHeader: function(inSender, inEvent) {
@@ -150,7 +145,7 @@ enyo.kind({
 		return true;
 	},
 	applyHeight: function(headerHeight, itemCount) {
-		//console.log(itemCount);
+		
 		if ( ( this.hasNode() ) && ( this.header.hasNode() ) ) {
 			
 			this.setMaxHeight( (this.node.offsetHeight - (headerHeight*2)) );

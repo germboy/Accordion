@@ -44,6 +44,12 @@ Methods
 - toggleItem(index) -> Toggles (open/close) the index position item of the accordion. Ex: this.$.accordion.toggleItem( this.$.accordion.getItems()[ 0 ] )
 
 
+Events
+------
+
+- onViewChange: "" -> Returns the object containing the currently open accordion item. Returns false if all items are toggled closed.
+
+
 Demos
 -----
 
